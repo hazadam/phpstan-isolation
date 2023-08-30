@@ -1,3 +1,8 @@
 #!/bin/sh
 
+if [ ! -f "$PROJECT_DIR/composer.phar" ]
+then
+  getcomposer
+fi
+
 php $PROJECT_DIR/composer.phar $@
