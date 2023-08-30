@@ -11,3 +11,4 @@ RUN apk del $DEV_DEPS
 RUN adduser -D -u 1000 developer
 RUN touch /usr/bin/xphp && echo $XPHP >> /usr/bin/xphp && chmod +x /usr/bin/xphp
 COPY .build/scripts/getcomposer /usr/bin/
+COPY .build/scripts/composer /usr/bin/
