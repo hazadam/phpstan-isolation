@@ -1,0 +1,22 @@
+{
+    "name": "admilabs/phpstan-isolation",
+    "description": "PHPStan extension for checking direction of dependencies",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Admilabs\\PhpstanIsolation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adam Hazda",
+            "email": "adam.hazda@gmail.com"
+        },
+        {
+            "name": "Miroslav Navrátil",
+            "email": "navratilm@outlook.com"
+        }
+    ],
+    "require": {}
+}
