@@ -1,0 +1,6 @@
+/vendor
+/.idea
+composer.phar
+.env
+composer.lock
+tests/.phpunit.cache

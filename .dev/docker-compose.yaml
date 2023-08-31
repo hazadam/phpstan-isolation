@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  php:
+    image: php:8.2-alpine
+  php-dev:
+    build:
+      context: ./../
+      dockerfile: .dev/Dockerfile.dev
+    environment:
+      PROJECT_DIR: $PROJECT_DIR
+    command: ["tail", "-f", "/dev/null"]
+    user: developer
+    working_dir: ${PROJECT_DIR}
+    volumes:
+      - "./../:${PROJECT_DIR}"

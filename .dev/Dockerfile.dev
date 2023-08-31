@@ -1,4 +1,5 @@
 FROM php:8.2-alpine
+ENV PROJECT_DIR=/project
 ARG PHPSTORM_SERVER_NAME=_
 ARG DEV_DEPS="$PHPIZE_DEPS linux-headers"
 ARG XPHP="PHP_IDE_CONFIG=\"serverName=$PHPSTORM_SERVER_NAME\" php -d xdebug.mode=debug -d xdebug.start_with_request=Yes -d xdebug.client_host=\"$(route -n | grep 'UG[ \t]' | awk '{print \$2}')\" \$@"
@@ -7,5 +8,7 @@ RUN apk update && \
     pecl install xdebug && \
     docker-php-ext-enable xdebug
 RUN apk del $DEV_DEPS
-RUN adduser -D -H -u 1000 developer
+RUN adduser -D -u 1000 developer
 RUN touch /usr/bin/xphp && echo $XPHP >> /usr/bin/xphp && chmod +x /usr/bin/xphp
+COPY .build/scripts/getcomposer /usr/bin/
+COPY .build/scripts/composer /usr/bin/
