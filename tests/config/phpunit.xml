@@ -8,6 +8,9 @@
     <testsuite name="unit">
       <directory>../unit</directory>
     </testsuite>
+    <testsuite name="feature">
+      <directory>../feature</directory>
+    </testsuite>
   </testsuites>
   <coverage/>
   <source>

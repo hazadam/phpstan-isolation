@@ -8,6 +8,11 @@
             "Admilabs\\PhpstanIsolation\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Admilabs\\PhpstanIsolation\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Adam Hazda",
@@ -23,5 +28,8 @@
     },
     "scripts": {
         "test": "php vendor/bin/phpunit -c tests/config/phpunit.xml --testsuite="
+    },
+    "require": {
+        "phpstan/phpstan": "^1.10"
     }
 }
