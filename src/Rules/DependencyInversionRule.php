@@ -30,7 +30,7 @@ class DependencyInversionRule implements Rule
             if ($this->isHighLevelModule($scope->getFile()) && $this->isLowLevelModule($nameInUse)) {
                 $errors[] = sprintf(
                     'High-level module %s should not depend on low-level module %s.',
-                    $scope->getNamespace(),
+                    $scope->getFile(),
                     $nameInUse
                 );
             }
