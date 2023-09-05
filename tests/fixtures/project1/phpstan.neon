@@ -3,4 +3,4 @@ parameters:
 	paths:
 		- src
 rules:
-    - \Admilabs\PhpstanIsolation\Rule\IsolationRule
+    - Admilabs\PhpstanIsolation\Rule\IsolationRule
